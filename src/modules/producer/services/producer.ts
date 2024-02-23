@@ -20,7 +20,17 @@ export default class ProducerService {
     country: string;
     region: string;
   }) {
-    return this.producerDTO.getProductByFields({ name, country, region });
+    const producer = await this.producerDTO.getProductByFields({
+      name,
+      country,
+      region,
+    });
+
+    if (!producer) {
+      throw new Error('Producer not found');
+    }
+
+    return producer;
   }
 
   async getProducerById(id: string) {
