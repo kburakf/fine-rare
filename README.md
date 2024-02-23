@@ -46,8 +46,12 @@ This repository contains the implementation of a simple GraphQL product API buil
 
 Ensure the .env file is set up correctly in the project root with the following variables:
 
-- MONGO_URI: Connection string for MongoDB.
+- MONGO_URI: Connection string for MongoDB
   - Example: mongodb://mongo:27017/graphql-backend
+- PORT: Connection port for NodeJS
+  - Example: 3000
+- NODE_ENV: System environment
+  - Example: development
 
 ## Usage
 
